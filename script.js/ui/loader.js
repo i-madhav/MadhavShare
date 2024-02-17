@@ -27,6 +27,6 @@ export function domRender(){
         modal('modal-template')
         setTimeout(()=>{
             hideModal()
-        },1000)
+        },2000)
     })
 }
