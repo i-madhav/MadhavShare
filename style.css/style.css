@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-background-color:#008F7A;
+}
+
+.navbar{
+    background-color: var(--primary-background-color);
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+
+.searchLocation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+
+.searchLocation button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#search{
+    width: 100%;
+    padding:1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    margin-right: -2rem;
+}
+
+.currentLocation button{
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+}
+
+.mapShare{
+    display: flex;
+   
+   background-color: var(--primary-background-color);
+   height: 84.5vh;
+
+   padding: 10px;
+}
+
+.map{
+    border: 1px solid black;
+    flex-basis: 50%;
+    background-color: black;
+    color: white;
+}
+
+.map p{
+    text-align: center;
+    margin: 40% 0;
+}
+
+#share-controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-basis: 50%;
+}
+
+#share-link{
+    padding: 1rem 32%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+#share-btn{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #FF9671;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
