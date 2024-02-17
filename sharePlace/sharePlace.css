@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -25,19 +25,21 @@ body{
 }
 
 .maprender{
+    display: flex;
+    height: 70vh;
+    padding: 10px;  
+}
+
+.map{
+    margin: 0 auto;
+    border: 1px solid black;
+     width: 50%;
     background-color: black;
     color: white;
-
-    margin: 0 auto;
-    width: 60%;
-    height: 60vh;
-    padding: 10rem 5rem;
-
-    text-align: center;
 }
 
 .btn{
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
