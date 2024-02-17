@@ -32,14 +32,18 @@ function handleCallBackCoords(coords , callback){
 }
 
 async function getCoordsFromAddress(event){
-    event.preventDefault();
-    modal('modal-template')
-    const searchValue = document.querySelector("#search").value;
-    const coordinates = await getCoordsAddres(searchValue);
-    hideModal();
-    handleCallBackCoords(coordinates,searchRenderMap);
-
-    document.querySelector("#search").value = "";
+    try{
+        event.preventDefault();
+        modal('modal-template')
+        const searchValue = document.querySelector("#search").value;
+        const coordinates = await getCoordsAddres(searchValue);
+        hideModal();
+        handleCallBackCoords(coordinates,searchRenderMap);
+        document.querySelector("#search").value = "";
+    }catch(error){
+        hideModal();
+        console.log("Try searching again something went wrong" + error)
+    }
 }
 
 domRender();
