@@ -1,19 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
+
 }
 
-body{
+body {
     background-color: var(--primary-background-color);
 }
 
-:root{
-    --primary-background-color:#008F7A;
+:root {
+    --primary-background-color: #008F7A;
 }
 
-.navbar{
+.navbar {
     background-color: var(--primary-background-color);
     height: 7rem;
     display: flex;
@@ -23,7 +23,7 @@ body{
     width: 100%;
 }
 
-.searchLocation{
+.searchLocation {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,15 +31,15 @@ body{
 }
 
 
-.searchLocation button{
+.searchLocation button {
     background-color: transparent;
     border: none;
     outline: none;
 }
 
-#search{
+#search {
     width: 100%;
-    padding:1rem;
+    padding: 1rem;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -47,7 +47,7 @@ body{
     margin-right: -2rem;
 }
 
-.currentLocation button{
+.currentLocation button {
     padding: 1rem 1.5rem;
     border-radius: 10px;
     font-weight: bolder;
@@ -55,45 +55,48 @@ body{
     outline: none;
 }
 
-.mapShare{
+.mapShare {
     display: flex;
-   
-   background-color: var(--primary-background-color);
-   height: 84.5vh;
 
-   padding: 10px;
+    background-color: var(--primary-background-color);
+    height: 84.5vh;
+
+    padding: 10px;
 }
 
-.map{
+.map {
     border: 1px solid black;
     flex-basis: 50%;
     background-color: black;
     color: white;
 }
 
-.map p{
+.map p {
     text-align: center;
     margin: 40% 0;
 }
 
-#share-controls{
+#share-controls {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    flex-basis: 50%;
+    width: 50rem;
 }
 
-#share-link{
+#share-link[value*="Sharable link."] {
     padding: 1rem 32%;
     border-radius: 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
+    text-overflow: unset;
+    overflow: visible;
+    white-space: normal;
 }
 
 
-#share-btn{
+#share-btn {
     margin-top: 15px;
     padding: 10px;
     background-color: #FF9671;
@@ -107,76 +110,7 @@ body{
 /*-------------------------------------------------------------------------*/
 /*Loader*/
 
-
-/*.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(218, 61, 61, 0.75);
-    z-index: 10;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 25vh;
-    left: 10%;
-    width: 80%;
-    background: rgb(9, 7, 7);
-    z-index: 20;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  }
-  
-  .modal__content {
-    padding: 1rem;
-    min-height: 10rem;
-  }
-  
-  .centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .lds-dual-ring {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-  }
-  .lds-dual-ring:after {
-    content: ' ';
-    display: block;
-    width: 46px;
-    height: 46px;
-    margin: 1px;
-    border-radius: 50%;
-    border: 5px solid #36007c;
-    border-color: #36007c transparent #36007c transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-  }
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .modal {
-      left: calc(50% - 15rem);
-      width: 30rem;
-    }
-  }*/
-
-
-  /* HTML: <div class="loader"></div> */
-
-
-  .backdrop {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -184,7 +118,7 @@ body{
     height: 100vh;
     background: rgba(244, 239, 239, 0.75);
     z-index: 10;
-  }
+}
 
 .loader {
     width: 50%;
@@ -197,9 +131,9 @@ body{
 
     top: 50vh;
     left: 25vw;
-  }
+}
 
-  .loader::before {
+.loader::before {
     content: "";
     position: absolute;
     margin: 2px;
@@ -207,8 +141,10 @@ body{
     border-radius: inherit;
     background: currentColor;
     animation: l6 2s infinite;
-  }
+}
 
-  @keyframes l6 {
-      100% {inset:0}
-  }
+@keyframes l6 {
+    100% {
+        inset: 0
+    }
+}

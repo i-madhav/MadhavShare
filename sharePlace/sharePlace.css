@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #008F7A;
+}
+
+.header{
+    height: 7rem;
+    background-color: #C4FCEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3rem;
+}
+
+
+.header h1{
+    font-size: 50px;
+    color: #845EC2;
+}
+
+.maprender{
+    background-color: black;
+    color: white;
+
+    margin: 0 auto;
+    width: 60%;
+    height: 60vh;
+    padding: 10rem 5rem;
+
+    text-align: center;
+}
+
+.btn{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+   
+    padding: 10px 30px;
+    background-color: #FF9671;
+    border-radius: 10px;
+}
+
+.btn a:active,
+.btn a:focus{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+   
+    padding: 10px 30px;
+    background-color: #FF9671;
+    border-radius: 10px;
+}

@@ -1,6 +1,7 @@
 import { domRender, hideModal, modal, showModal } from "./ui/loader.js";
 import { getCoordsAddres } from "./utility/loaction.js";
 import { renderMapForCurrentLocation, searchRenderMap } from "./utility/map.js";
+import { sharePlaceUrl } from "./utility/sharePlace.js";
 
 const getCurrentLocationBtn= document.querySelector(".currentLocation-btn");
 getCurrentLocationBtn.addEventListener('click', getCurrentLocation);
@@ -32,10 +33,16 @@ function handleCallBackCoords(coords , callback){
 }
 
 async function getCoordsFromAddress(event){
+    event.preventDefault();
+    const searchValue = document.querySelector("#search").value;
+    if(!searchValue || searchValue.trim() === ""){
+        alert("Invalid Input :(");
+        return;
+    }
+    sharePlaceUrl(searchValue);
+    
     try{
-        event.preventDefault();
         modal('modal-template')
-        const searchValue = document.querySelector("#search").value;
         const coordinates = await getCoordsAddres(searchValue);
         hideModal();
         handleCallBackCoords(coordinates,searchRenderMap);
