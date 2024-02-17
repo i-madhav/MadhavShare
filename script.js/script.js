@@ -1,3 +1,4 @@
+import { domRender, hideModal, modal, showModal } from "./ui/loader.js";
 import { getCoordsAddres } from "./utility/loaction.js";
 import { renderMapForCurrentLocation, searchRenderMap } from "./utility/map.js";
 
@@ -8,8 +9,9 @@ const searchLoaction  = document.querySelector(".searchLocation");
 searchLoaction.addEventListener("submit",getCoordsFromAddress);
 
 function getCurrentLocation(){
-    console.log("running");
+    modal('modal-template');
     navigator.geolocation.getCurrentPosition(success => {
+        hideModal();
         const coords = {
             lat: Number(success.coords.latitude),
             lon: Number(success.coords.longitude)
@@ -20,6 +22,7 @@ function getCurrentLocation(){
 
         getCoordsAddres("india")
     }, error => {
+        hideModal()
         alert("Couldn't Load location" + error);
     })
 }
@@ -30,10 +33,13 @@ function handleCallBackCoords(coords , callback){
 
 async function getCoordsFromAddress(event){
     event.preventDefault();
+    modal('modal-template')
     const searchValue = document.querySelector("#search").value;
     const coordinates = await getCoordsAddres(searchValue);
-    
+    hideModal();
     handleCallBackCoords(coordinates,searchRenderMap);
 
     document.querySelector("#search").value = "";
 }
+
+domRender();
