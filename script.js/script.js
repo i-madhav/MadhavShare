@@ -1,13 +1,16 @@
-import { domRender, hideModal, modal, showModal } from "./ui/loader.js";
+import { domRender, hideModal, modal, showModal} from "./ui/loader.js";
 import { getCoordsAddres } from "./utility/loaction.js";
-import { renderMapForCurrentLocation, searchRenderMap } from "./utility/map.js";
-import { sharePlaceUrl } from "./utility/sharePlace.js";
+import { renderMapForCurrentLocation, searchRenderMap} from "./utility/map.js";
+import { sharePlaceUrl , sharePlaceUrlHandler} from "./utility/sharePlace.js";
 
 const getCurrentLocationBtn= document.querySelector(".currentLocation-btn");
 getCurrentLocationBtn.addEventListener('click', getCurrentLocation);
 
 const searchLoaction  = document.querySelector(".searchLocation");
 searchLoaction.addEventListener("submit",getCoordsFromAddress);
+
+const shareBtn = document.querySelector("#share-btn");
+shareBtn.addEventListener("click" , sharePlaceUrlHandler);
 
 function getCurrentLocation(){
     modal('modal-template');
